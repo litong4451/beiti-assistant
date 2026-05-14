@@ -1,0 +1,68 @@
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  padding-bottom: calc(16px + var(--safe-area-bottom));
+}
+
+.action-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 56px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn-icon {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-label {
+  font-size: 13px;
+}
+
+.btn-unknown {
+  background: rgba(248, 113, 113, 0.12);
+  color: var(--accent-error);
+  border-color: rgba(248, 113, 113, 0.2);
+}
+
+.btn-unknown:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.2);
+}
+
+.btn-fuzzy {
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--accent-warning);
+  border-color: rgba(251, 191, 36, 0.2);
+}
+
+.btn-fuzzy:hover:not(:disabled) {
+  background: rgba(251, 191, 36, 0.2);
+}
+
+.btn-mastered {
+  background: rgba(74, 222, 128, 0.12);
+  color: var(--accent-success);
+  border-color: rgba(74, 222, 128, 0.2);
+}
+
+.btn-mastered:hover:not(:disabled) {
+  background: rgba(74, 222, 128, 0.2);
+}
