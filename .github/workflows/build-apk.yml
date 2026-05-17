@@ -28,11 +28,14 @@ jobs:
     - name: List dist folder
       run: ls -la dist/
       
+    - name: Create assets directory
+      run: mkdir -p android/app/src/main/assets/public
+      
     - name: Clear old web assets
-      run: rm -rf android/app/src/main/assets/public
+      run: rm -rf android/app/src/main/assets/public/*
       
     - name: Copy web files to Android assets
-      run: cp -r dist android/app/src/main/assets/public
+      run: cp -r dist/* android/app/src/main/assets/public/
       
     - name: Verify copied files
       run: ls -la android/app/src/main/assets/public/
